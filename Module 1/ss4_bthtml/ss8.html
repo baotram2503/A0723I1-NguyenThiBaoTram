@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>createform</title>
+    <style>
+        .sothich {
+            color: white;
+            background-color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 500px">
+    <form>
+        <div class="sothich">Sở thích của bạn</div>
+        <table>
+            <tr>
+                <td>Họ và tên:</td>
+                <td><input type="text" name="name"></td></br>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email"  ></td>
+            </tr>
+            <tr>
+                <td rowspan="3">Sở thích :</td>
+                <td>
+                    <label>thể thao</label>
+                    <input type="radio"  name="thethao" value="thethao">
+                    <label>âm nhạc</label>
+                    <input type="radio"  name="amnhac" value="amnhac">
+                    <label> đọc sách </label>
+                    <input type="radio"  name="docsach" value="docsach">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> lướt web</label>
+                    <input type="radio" name="luotweb" value="luotweb">
+                    <label>chơi game</label>
+                    <input type="radio" name="choigame" value="choigame">
+                    <label>điện ảnh</label>
+                    <input type="radio"  name="dienanh" value="dienanh">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>du lịch</label>
+                    <input type="radio"  name="dulich" value="dulich">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Gửi thông tin">
+        <input type="reset" value="Nhập lại">
+    </form>
+</div>
+</body>
+</html>

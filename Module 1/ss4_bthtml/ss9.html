@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản 2</title>
+</head>
+<style>
+    .dangky {
+        color: blue;
+        background-color: deepskyblue;
+    }
+</style>
+<style>
+    body {
+        background-color: khaki;
+    }
+</style>
+</head>
+<body>
+    <form>
+        <h2><div class="dangky">Đăng ký học viên</div></h2>
+        <table>
+            <tr>
+                <td>Họ và tên:</td>
+                <td><input type="text" name="name"></td></br>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td><input type="date" name="date"  ></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" name="gender" value="Nam" checked> Nam
+                    <input type="radio" name="gender" value="Nữ"> Nữ<br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="addrress">Địa chỉ :</label><br></td>
+                <td>
+                    <input type="text" id="addrress" name="Địa chỉ">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="class"> Lớp:</label></td>
+                <td>
+                    <select id="class" name="class">
+                        <option value="chọn lớp">Chọn lớp</option>
+                        <option>lớp 1 -lớp 5</option>
+                        <option>lớp 6 - lớp 9</option>
+                        <option>lớp 10 - lớp 12</option>
+                        <option> Khác </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email :</label><br></td>
+                <td>
+                    <input type="email" id="email" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="phone">Điện thoại :</label></td>
+                <td>
+                    <input type="number" id="phone" name="Điện thoại">
+                </td>
+            </tr>
+        </table>
+        <button tuyle="Submit">Đăng kí</button>
+        <button tuyle="Reset"> Nhập lại</button>
+    </form>
+</div>
+</body>
+</html>
