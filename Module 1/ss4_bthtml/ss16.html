@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Ứng dụng chuyển đổi tiền tệ</title>
@@ -33,9 +33,9 @@
         </table>
         <script>
             functionchuyendoitiente() {
-                let Amount = document.getElementById("sotiennhap").value;
-                let F = document.getElementById("tennuoc").value;
-                let T = document.getElementById("tentien").value;
+                let Amount = document.getElementById("Amount").value;
+                let F = document.getElementById("From Currency").value;
+                let T = document.getElementById("To Currency").value;
                 if ((F == "VietNam" && T == "VND") || (F == "American" && T == "USD")) {
                     result = "result: " +  Amount;
                 }
