@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung may tinh</title>
+</head>
+<body>
+    <form >
+        <div class="input">
+            <input type="number" value="number1" id="mum1">
+            <input type="number" value="number2" id="num2">
+        </div>
+        <div >
+            <button onclick="add()">Addition(+)</button>
+            <button onclick="Sub()">Subtraction(-)</button>
+            <button onclick="Mul()">Multiplication(*)</button>
+            <button onclick="Div()">Division(/)</button>
+        </div>
+        <p id="result"></p>
+    </form>
+
+</div>
+<script>
+    function add(){
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let a = parseFloat(number1);
+        let b = parseFloat(number2);
+        let result;
+
+        result = "result : " + (a + b);
+        document.getElementById("result").innerHTML = result;
+
+    }
+
+    function Sub(){
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let a = parseFloat(number1);
+        let b = parseFloat(number2);
+        let result;
+
+        result = "result : " + (a - b);
+        document.getElementById("result").innerHTML = result;
+
+    }
+
+    function Mul(){
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let a = parseFloat(number1);
+        let b = parseFloat(number2);
+        let result;
+
+        result = "result : " + (a * b);
+        document.getElementById("result").innerHTML = result;
+
+    }
+
+    function Div(){
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let a = parseFloat(number1);
+        let b = parseFloat(number2);
+        let result;
+
+        result = "result : " + (a / b);
+        document.getElementById("result").innerHTML = result;
+
+    }
+</script>
+</body>
+</html>
