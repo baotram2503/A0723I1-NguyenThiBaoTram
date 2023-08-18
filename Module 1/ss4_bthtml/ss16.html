@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th> Amount</th>
+        <th> From Currency</th>
+        <th> To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text"> </td>
+        <td><select>
+            <option id="VietNam" value="VietNam">VietNam</option>
+            <option id="America" value="America"> America</option>
+        </select></td>
+        <td>
+            <select>
+                <option id="VND" value="VND">VND</option>
+                <option id="USD" value="USD">USD</option>
+
+            </select>
+        </td>
+        <td>
+        <input input type="button" value="Convert" id="button" onclick="chuyendoitiente()">
+        </td>
+        <tr>
+        <td style="color: blue" id="result" value=" result">Result</td>
+        </tr>
+        </table>
+        <script>
+            functionchuyendoitiente() {
+                let Amount = document.getElementById("sotiennhap").value;
+                let F = document.getElementById("tennuoc").value;
+                let T = document.getElementById("tentien").value;
+                if ((F == "VietNam" && T == "VND") || (F == "American" && T == "USD")) {
+                    result = "result: " +  Amount;
+                }
+                if (F == "VietNam" && T == "USD") {
+                    result = "result: " + Amount /23000 ;
+                }
+                else (F == "American" && T == "VND") {
+                    result = "result: " +  Amount * 23000;
+                }
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+</body>
+</html>
