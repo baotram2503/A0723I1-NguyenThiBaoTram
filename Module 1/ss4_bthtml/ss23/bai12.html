@@ -6,7 +6,16 @@
 </head>
 <body>
 <script>
-
+   let a=parseFloat(prompt('Nhập số tiền ban đầu:'));
+   let b=parseFloat(prompt('Số tháng cho vay:'));
+   let c= parseFloat(prompt('Số tiền hàng tháng'));
+   let d;
+   if( a<0 || b<0 || c<0){
+       alert('Vui lòng nhập lại');
+   }else{
+       d=a/b*c;
+       alert('Lãi:'+d);
+   }
 </script>
 </body>
 </html>
