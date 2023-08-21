@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+<script>
+   let x=parseFloat(prompt('Nhập số điện tiêu thụ:'));
+   let y;
+   if (0< x<=50){
+       y=x*1.678;
+   }else if(51<=x<=100){
+       y=x*1.734;
+   }else if (101<=x<=200){
+       y=x*2.014;
+   }else if (201 <=x<=300){
+       y=x*2.536;
+   }else if (301<=x<=400){
+       y=x*2.834;
+   }else {
+       y=x*2.927;
+   }
+   alert('Số tiền phải trả:'+y);
+</script>
+</body>
+</html>

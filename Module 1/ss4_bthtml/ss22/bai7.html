@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt('Nhập số phút:'));
+    const phicodinh=25;
+    let b; //b : phí
+    let c; // c: tiền phải trả = phí*0.01+phí cố định
+    if(a>200){
+        b=(a-200)*200+150*400+50*600;
+        c=b*0.01+phicodinh;
+        alert('Tiền phải trả='+c);
+    }
+    else if (a>50) {
+        b = (a-50)*400+50*600;
+        c=b*0.01+phicodinh;
+        alert('Tiền phải trả=' + c);
+    }else {
+        b=a*600;
+        c=b*0.01+phicodinh;
+        alert('Tiền phải trả=' + c);
+    }
+</script>
+</body>
+</html>

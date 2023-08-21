@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+<script>
+   let a= parseFloat(prompt('Nhập tiền thu nhập cá nhân:'));
+   let b;
+   if (a<=5){
+       b=a*5/100;
+       alert('Số thuế:'+b);
+   }else if(5<a<=10){
+       b=a*10/100-0.25;
+       alert('Số thuế:'+b);
+   }else if(10<a<=18){
+       b=a*15/100-0.75;
+       alert('Số thuế:'+b);
+   }else if(18<a<=32){
+       b=a*20/100-1.65;
+       alert('Số thuế:'+b);
+   }else if(32<a<=52){
+       b=a*25/100-3.25;
+       alert('Số thuế:'+b);
+   }else if(52<a<=80){
+       b=a*30/100-5.85;
+       alert('Số thuế:'+b);
+   }else{
+       b=a*35/100-9.85;
+       alert('Số thuế:'+b);
+   }
+</script>
+</body>
+</html>

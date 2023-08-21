@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt('Nhập điểm kiểm tra:'));
+    let b = parseFloat(prompt('Nhập điểm giữa kì:'));
+    let c = parseFloat(prompt('Nhập điểm cuối kì:'));
+    let d=a*0.2+b*0.3+c*0.5;
+    if ( d >= 8){
+        alert(' HSG');
+    }
+    else if ( d>= 6.5 && d<8){
+        alert(' HSK');
+    }
+    else if( d<6.5 && d>=5){
+        alert('HSTB');
+    }
+    else{
+        alert('HSY');
+    }
+</script>
+</body>
+</html>
