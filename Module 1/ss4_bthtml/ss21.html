@@ -5,22 +5,31 @@
     <title>Calculator</title>
 </head>
 <body>
-<script>
-    var bieuThuc='';
-    function toanhang(x){
-        bieuThuc=bieuThuc+x;
-    }
-    function toantu(pt){
-        bieuThuc=bieuThuc+pt;
-    }
-    function thuchien(){
-        var result = eval(bieuThuc);
-        bieuThuc='';
-        alert('Kết quả'+ result);
-    }
-    <button onClick="toanhang()"></button>
-    <button onClick="toanhang()"></button>
-    <button onClick="toanhang()"></button>
+    <input style="font-size: 13px; font-weight: 30px; width: 125px" type="text" id="result" justifycontent="sapce between">
+    </br>
+    <button style="font-size:15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5" onClick="toanhang(1)">1</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang(2)">2</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 "onClick="toanhang(3)">3</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang('+')">+</button>
+    </br>
+    <button  style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 "onClick="toanhang(4)">4</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang(5)">5</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang(6)">6</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang('-')">-</button>
+    </br>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang(7)">7</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang(8)">8</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang(9)">9</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang('*')">*</button>
+    </br>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang(C)">C</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang(0)">0</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 "onClick="toanhang(=)">=</button>
+    <button style="font-size: 15px ; font-weight: bold; width: 30px;flex-grow: 1; margin: 5 " onClick="toanhang('/')">/</button>
+    </br>
+ <script>
+
+
 </script>
 </body>
 </html>
