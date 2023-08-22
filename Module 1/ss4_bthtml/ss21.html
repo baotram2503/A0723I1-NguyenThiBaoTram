@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<script>
+    var bieuThuc='';
+    function toanhang(x){
+        bieuThuc=bieuThuc+x;
+    }
+    function toantu(pt){
+        bieuThuc=bieuThuc+pt;
+    }
+    function thuchien(){
+        var result = eval(bieuThuc);
+        bieuThuc='';
+        alert('Kết quả'+ result);
+    }
+    <button onClick="toanhang()"></button>
+    <button onClick="toanhang()"></button>
+    <button onClick="toanhang()"></button>
+</script>
+</body>
+</html>
