@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let n1=1;
+    let n2=1;
+    let S=0;
+    let next;
+    for (let i=3;i<=20;i++) {
+        next=n1+n2;
+        S+=next;
+        n1=n2;
+        n2=next;
+    }
+    document.write("Tổng = "+S);
+</script>
+</body>
+</html>

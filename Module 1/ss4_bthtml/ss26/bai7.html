@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let n = 1;
+    let S=0;
+    while (count <= 30) {
+        if (n % 7 === 0) {
+            S+=n;
+            count++;
+        }
+        n++;
+    }
+    document.write("Tổng = " +S);
+</body>
+</html>

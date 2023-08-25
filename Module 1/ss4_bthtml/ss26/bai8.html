@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<input type="button" name="" id="" value="Click to start game" onclick="run()">
+<script>
+    let phamvi=parseFloat(prompt("Số bạn muốn đoán trong khoảng lớn nhất bằng bao nhiêu:"))
+    let nhapso = parseFloat(prompt("Nhập vào số muốn đoán"));
+    let soRamdom= Math.floor(Math.random()*phamvi);
+    let count =0;
+    while (soRamdom !== nhapso){
+        count++;
+        if (count  <=3) {
+            count+=1;
+            if (nhapso != soRamdom) {
+                if (nhapso < soRamdom) {
+                    alert("Đáp án lớn hơn số bạn nhập");
+                } else {
+                    alert("Đáp án nhỏ hơn số bạn nhập")
+                }
+                nhapso = parseFloat(prompt("Nhập vào số muốn đoán"));
+            }
+            if (nhapso == soRamdom){
+                alert("Chúc mừng bạn đã đoán đúng");
+            }
+            console.log(count);
+        }
+        if (count>3) alert("Bạn đã hết số lần đoán");
+    }
+</script>
+</body>
+</html>
