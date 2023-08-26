@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let tien = parseFloat(prompt('Nhập số tiền mượn'));
+    let thang = parseFloat(prompt('Nhập số tháng trả:'));
+    let lai = parseFloat(prompt('Lãi suất:'));
+        let money=tien;
+        for (let i=1;i<=thang;i++) {
+            money = money * (1 + lai/100);
+        }
+        document.write('Số tiền phải trả'+money);
+</script>
+</body>
+</html>

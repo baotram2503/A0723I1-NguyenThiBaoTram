@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let CD = parseInt(prompt("Nhập chiều dài hình chữ nhật"));
+    let CR = parseInt(prompt("Nhập chiều rộng hình chữ nhật"));
+    if (CR > 0 && CD > 0) {
+        for (let i=1;i<=CR;i++) {
+            for (let j=1;j<=CD;j++) {
+                if (i===1 || j===1 || i===CR || j===CD) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp");
+                }
+            }
+            document.write("<br/>");
+        }
+    } else {
+        alert("Vui lòng nhập lại số liệu")
+    }
+</script>
+</body>
+</html>
