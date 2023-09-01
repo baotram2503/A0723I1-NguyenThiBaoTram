@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    let num=parseInt(prompt(" Nhập số lượng phần tử trong mảng:"));
+    var arr = new Array(num);
+    for(let i=0;i<arr.length;i++){
+        arr[i] = Math.floor(Math.random()*100+1);
+    }
+    for (let i=0; i<arr.length;i++) {
+        document.write(arr[i]+"<br> ");
+    }
+    let newArr;
+    for(let i=0;i<arr.length;i++){
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[i]<arr[j]){
+                newArr=arr[i];
+                arr[i]=arr[j];
+                arr[j]=newArr;
+                break;
+            }
+        }
+    }
+    document.write("Mảng sau khi được sắp xếp theo chiều giảm dần:" arr);
+
+</script>
+</body>
+</html>

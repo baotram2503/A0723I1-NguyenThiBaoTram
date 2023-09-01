@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    var V = parseInt(prompt("Nhập vào số nguyên cần kiểm tra: "));
+    var arr = new Array(10);
+    for(let i=0;i<arr.length;i++){
+        arr[i] = Math.floor(Math.random()*100+1);
+    }
+    for (let i=0; i<arr.length;i++) {
+        document.write(arr[i]+"<br> ");
+    }
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]===V){
+            arr.slice(i,1);
+            i--;
+            document.write(arr);
+            break;
+        }else{
+            document.write("V is not in array")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhập số lượng phần tử trong mảng"));
+    let arr = new Array(num);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("Nhập phần tử thứ " +i );
+    }
+    let max = arr[0];
+    let indexMax = 1;
+    for (let i =1; i < arr.length; i++) {
+        if (max < arr[i]) {
+            max = arr[i];
+            indexMax = i+1;
+        }
+    }
+    document.write("Phần tử  có giá trị lớn nhất trong mảng nằm ở vị trí thứ " +indexMax );
+</script>
+</body>
+</html>

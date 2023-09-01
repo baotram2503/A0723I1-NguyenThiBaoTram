@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhập số lượng phần tử trong mảng"));
+    let arr = new Array(num);
+    let max = arr[0];
+    let sum=0;
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("Nhập phần tử thứ " +i );
+        if (max < arr[i]) {
+            max = arr[i];
+        }
+        sum+=arr[i];
+    }
+    document.write("Các phần tử trong mảng"+arr[i]);
+    document.write("Giá trị lớn nhất"+ max);
+    document.write("Trung bình cộng các phần tử trong mảng " + (sum/arr.length));
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhập số  phần tử trong mảng 1"));
+    let arr1 = new Array(num);
+    for (let i = 0; i < arr1.length; i++) {
+        arr1[i] = parseInt(prompt("Nhập phần tử thứ " + i));
+    }
+    document.write("Các phần tử trong mảng 1"+arr1[i]);
+    let arr2=new Array(num);
+    for (let i = 0; i < arr2.length; i++) {
+        arr2[i] = parseInt(prompt("Nhập phần tử thứ 2 " + i));
+    }
+    document.write("Các phần tử trong mảng 2"+arr2[i]);
+    let arrC = arr1.concat(arr2);
+    for (let i = 0; i < arrC.length; i++) {
+        document.write(arrC[i]+"&nbsp; ");
+    }
+    document.write("<br>");
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhập số lượng phần tử trong mảng"));
+    let arr = new Array(num);
+    let result = 0;
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("Nhập phần tử thứ " +i );
+        if (arr[i]>=10) {
+            result+=1;
+        }
+    }
+    document.write("Các phần tử : ");
+    document.write(arr[i]+'<br>');
+    document.write("số phần tử trong mảng lớn hơn hoặc bằng 10 là " + result);
+</script>
+</body>
+</html>

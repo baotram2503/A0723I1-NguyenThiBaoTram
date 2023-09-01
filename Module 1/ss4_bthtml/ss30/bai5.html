@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhập số  phần tử trong mảng"));
+    let arr = new Array(num);
+    let n = 0;
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt("Nhập phần tử thứ " +i ));
+        if (arr[i] < 0) {
+            n++;
+        }
+    }
+    document.write("Số phần tử nguyên âm trong mảng: " + n);
+</script>
+</body>
+</html>

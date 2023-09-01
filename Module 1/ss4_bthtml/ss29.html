@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng từ điển đơn giản</title>
+</head>
+<body>
+<label for="en">Nhập từ :</label>
+<input type="text" value="" id="en">
+<input type="button" value="Dịch từ" onclick="trans()">
+<p id="result"><br></p>
+<script>
+    function trans() {
+        let input = document.getElementById("en").value;
+        let EN = ["apple", "banana", "grape","orange","lemon"];
+        let VI = ["táo", "chuối", "nho","cam","chanh"];
+        for (let i = 0; i < EN.length; i++) {
+            if (input == EN[i]) {
+                document.getElementById('result').innerText = VI[i];
+                break;
+            } else {
+                document.getElementById('result').innerText = "Không có dữ liệu";
+            }
+        }
+    }
+</script>
+</body>
+</html>

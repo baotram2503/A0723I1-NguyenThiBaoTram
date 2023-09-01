@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    var num = parseInt(prompt("Nhập số phần tử  của mãng :"));
+    var arr =  new Array(num);
+    var output = new Array(num);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt("Mời bạn nhập giá trị phần tử thứ " + (i+1)));
+    }
+    for (let i = arr.length - 1, j= 0; i >= 0, j < arr.length; i--, j++) {
+        output[j] = arr[i];
+    }
+    document.write("Mảng nhập vào"+arr);
+    document.write("Mảng sau khi đảo ngược: " + output);
+</script>
+</body>
+</html>
