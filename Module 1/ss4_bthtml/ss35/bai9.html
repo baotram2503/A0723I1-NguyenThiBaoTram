@@ -6,12 +6,12 @@
 </head>
 <body>
 <script>
-    var arr = prompt("nhập vào một mảng");
-    var character = prompt("nhập vào một kí tự: ");
-    function characterCheck(arr,character){
+    var mang = prompt("Nhập vào một mảng");
+    var kitu = prompt("Nhập vào một kí tự: ");
+    function check(mang,kitu){
         let count = 0;
-        for (let i=0;i<arr.length;i++){
-            if (character===arr[i]){
+        for (let i=0;i<mang.length;i++){
+            if (kitu===mang[i]){
                 count++;
             }else{
                 return -1;
@@ -19,8 +19,7 @@
             return count;
         }
     }
-    alert(characterCheck(arr,character));
-    //
+    alert(check(mang,kitu))
 </script>
 </body>
 </html>
