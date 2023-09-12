@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài 2</title>
 </head>
 <body>
-
+<script>
+    var kytu = prompt("Nhập ký tự cần kiểm tra:");
+    function kiemtrakytu(kytu) {
+        var nguyenam = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
+        if (nguyenam.includes(kytu)) {
+            alert(kytu + " là nguyên âm");
+        } else {
+            alert(kytu + " là phụ âm");
+        }
+    }
+    kiemtrakytu(kytu);
+</script>
 </body>
 </html>

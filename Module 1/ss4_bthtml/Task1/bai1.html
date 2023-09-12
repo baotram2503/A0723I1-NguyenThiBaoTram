@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài 1</title>
 </head>
 <body>
-
+<script>
+    function tinhLuongrong(luong) {
+        var thue;
+        if (luong > 15000000) {
+            thue = luong * 0.2;
+        } else if (luong >= 7000000 && luong <= 15000000) {
+            thue = luong * 0.1;
+        } else {
+            thue = luong * 0.05;
+        }
+        var luongrong = luong - thue;
+        return luongrong;
+    }
+    var luong = parseInt(prompt("Nhập lương của bạn:"));
+    alert("Lương ròng của nhân viên là: " + tinhLuongrong(luong));
+</script>
 </body>
 </html>
