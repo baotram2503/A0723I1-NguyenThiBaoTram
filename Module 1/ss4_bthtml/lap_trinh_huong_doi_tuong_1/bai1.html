@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(dai, rong) {
+            this.dai = dai;
+            this.rong = rong;
+        }
+        tinhDienTich() {
+            return this.dai * this.rong;
+        }
+        tinhChuVi() {
+            return 2 * (this.dai + this.rong);
+        }
+        hienThi(ctx) {
+            ctx.fillRect(0, 0, this.dai, this.rong);
+        }
+    }
+    let canvas = document.getElementById('myCanvas');
+    let ctx = canvas.getContext('2d');
+    let hcn = new Rectangle(100, 50);
+    hcn.hienThi(ctx);
+    alert("Chu vi hình chữ nhật"+ hcn.tinhChuVi());
+    alert("Diện tích hình chữ nhật"+ hcn.tinhDienTich());
+</script>
+</body>
+</html>

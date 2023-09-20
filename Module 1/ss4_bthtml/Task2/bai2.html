@@ -7,15 +7,15 @@
 <body>
 <script>
     var h= parseInt(prompt("Nhập chiều cao của tam giác:"));
-    for( let i=0; i<=h ; i++){
+    for( let i=1; i<=h ; i++){
         document.write("<center>");
         for (let j=1; j<=h-1; j++){
-            document.write(" ");
+            document.write("&nbsp;");
         }
         for ( let k=1; k<=2*i-1; k++){
             document.write("*");
         }
-        document.write("</center>");
+         document.write("</center>");
         document.write("<br>");
     }
 </script>

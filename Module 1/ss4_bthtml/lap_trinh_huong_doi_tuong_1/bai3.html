@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor() {
+            this.pin = 100;
+            this.soanTinNhan = "";
+            this.hopThuDen = [];
+            this.tinDaGui = [];
+            this.trangThai = false;
+        }
+
+        kiemTraTrangThai() {
+            this.trangThai = !this.trangThai;
+            if (this.trangThai) {
+                alert('Phone is ON');
+            } else {
+                alert('Phone is OFF');;
+            }
+        return this.trangThai;
+        }
+        sacPin() {
+            if (this.pin < 100) {
+                this.pin++;
+            }
+        }
+        kiemTraPin() {
+                alert("Pin còn lại : " + this.battery + "%");
+        }
+        soanTin(tinNhan) {
+            if (this.trangThai && this.pin > 0) {
+                this.soanTinNhan = tinNhan;
+                this.pin--;
+            }
+        }
+
+        nhanTin(tinNhan) {
+            if (this.trangThai && this.pin > 0) {
+                this.hopThuDen.push(tinNhan);
+                this.pin--;
+            }
+        }
+
+        guiTin(mobileKhac) {
+            if (this.trangThai && this.pin > 0) {
+                mobileKhac.nhanTin(this.soanTinNhan);
+                this.tinDaGui.push(this.soanTinNhan);
+                this.soanTinNhan = "";
+                this.pin--;
+            }
+        }
+
+        xemHopThuDen() {
+            if (this.trangThai && this.pin > 0) {
+                console.log(this.hopThuDen);
+                this.pin--;
+            }
+        }
+
+        xemTinDaGui() {
+            if (this.trangThai && this.pin > 0) {
+                console.log(this.tinDaGui);
+                this.pin--;
+            }
+        }
+    }
+    let nokia = new Mobile();
+    let iphone = new Mobile();
+    nokia.batDienThoai();
+    iphone.batDienThoai();
+    nokia.soanTin("Xin chào, iPhone!");
+    nokia.guiTin(iphone);
+    iphone.xemHopThuDen();
+</script>
+</body>
+</html>
