@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let tuSo=new Array();
+    let num=parseInt(prompt("Nhập số phần tử trong mảng:"));;
+    for(let i=0; i<num; i++) {
+        tuSo[i] = parseFloat(prompt("Mời bạn nhập giá trị cuả phần tử:" + (i + 1)));
+    }
+    alert(tuSo);
+    let mauSo=new Array();
+    for(let i=0; i<num; i++) {
+        mauSo[i] = parseFloat(prompt("Mời bạn nhập giá trị cuả phần tử:" + (i + 1)));
+    }
+    alert(mauSo);
+    let fractions= tuSo[0]/mauSo[0];
+    let index=0;
+    for(let i=1; i<num; i++) {
+        if(tuSo[i]/mauSo[i] >fractions) {
+            fractions=tuSo[i]/mauSo[i];
+            index=i;
+        }
+    }
+    alert("Giá trị lớn nhất của maxFraction là:"+fractions +"tại vị trí"+index);
+</script>
+</body>
+</html>
