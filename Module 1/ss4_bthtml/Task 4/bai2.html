@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function countUniqueCharacters(str) {
+        var uniqueChars = new Set(str);
+        return uniqueChars.size;
+    }
+    function main() {
+        let str = prompt("Nhập xâu ký tự từ bàn phím:");
+        document.write("Xâu đã nhập: " + str);
+        let count = countUniqueCharacters(str);
+        document.write("Số lượng kí tự khác nhau trong xâu: " + count);
+    }
+    main();
+</script>
+</body>
+</html>
