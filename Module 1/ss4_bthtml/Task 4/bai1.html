@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    function normalizeString(str) {
+        str = str.toLowerCase().replace(/\s+/g, ' ');
+        return str.replace(/(^| )(\w)/g, function(x) {
+            return x.toUpperCase();
+        });
+    }
+    function main() {
+        let str = prompt("Nhập xâu ký tự từ bàn phím:");
+        document.write("Xâu trước khi chuẩn hóa: " + str);
+        let normalizedStr = normalizeString(str);
+        document.write("Xâu sau khi chuẩn hóa: " + normalizedStr);
+        let longestWord = findLongestWord(normalizedStr);
+        document.write("Từ dài nhất trong xâu: " + longestWord);
+    }
+    main();
+
+</script>
+</body>
+</html>

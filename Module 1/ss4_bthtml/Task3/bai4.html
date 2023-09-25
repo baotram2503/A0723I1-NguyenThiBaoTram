@@ -1,25 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Bài 4</title>
 </head>
 <body>
-<h2> Menu</h2>
+<h2>Menu</h2>
 <h4>
     <ol>
-    <li>Cafe</li>
-    <li>Cam vắt</li>
-    <li>Nước ép cà rốt</li>
-    <li>Nước ép cà chua</li>
-    <li>Nước lọc</li>
-    <li>Nước dừa</li>
+        <li>Cafe - 15000đ</li>
+        <li>Cam vắt - 25000đ</li>
+        <li>Nước ép cà rốt - 25000đ</li>
+        <li>Nước ép cà chua - 25000đ</li>
+        <li>Nước lọc - 10000đ</li>
+        <li>Nước dừa - 20000đ</li>
     </ol>
 </h4>
-<input type="number">
-<input type="submit" value="Gửi">
+<input type="number" id="idFood" />
+<input type="number" id="num" />
+<button onclick="order()">Đặt Món</button>
+<button onclick="cal();">tính tiền</button>
+<p id="info"></p>
+<p id="total"></p>
 <script>
-
+    let chonMon = [
+        "Cafe",
+        "Cam vắt",
+        "Nước ép cà rốt",
+        "Nước ép cà chua",
+        "Nước lọc",
+        "Nước dừa",
+    ];
+    let donGia = [15000, 25000, 25000, 25000, 10000, 20000];
+    let price = 0;
+    let output = "";
+    // function cal() {}
+    function order() {
+        let id = parseFloat(document.getElementById("idFood").value);
+        let num = parseFloat(document.getElementById("num").value);
+       if(Number.isInteger((id)) && Number.isInteger(num)){
+          if(id > 0 && id <7){
+              output+=
+                  "Bạn vừa đặt " +
+                  chonMon[id-1] +
+                  " đơn giá " +
+                  donGia[id-1] +
+                  "đ, số lượng: " +
+                  num +
+                  "<br>"
+              ;
+              price += donGia[id] * num;
+              document.getElementById("info").innerHTML = output;
+              document.getElementById("total").innerHTML = '';
+          } else alert("Không tồn tại món bạn yêu cầu, vui lòng tiến hành đặt món lại")
+       } else alert("Giá trị nhập vào không hợp lệ. Vui lòng tiến hành đặt món lại")
+    }
+    function cal() {
+        document.getElementById("total").innerHTML =
+            "Tổng tiền thanh toán: " + price;
+        output = []
+        price = 0
+    }
 </script>
 </body>
 </html>
