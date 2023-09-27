@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    function commonCharacterCount(s1, s2) {
+        let amount = 0;
+        const arr1 = s1.split("");
+        const arr2 = s2.split("");
+
+        for (let i = 0; i < arr1.length; i++) {
+            const char = arr1[i];
+            const indexInArr2 = arr2.indexOf(char);
+
+            if (indexInArr2 !== -1) {
+                arr2.splice(indexInArr2, 1);
+                amount += 1;
+            }
+        }
+
+        return amount;
+    }
+
+    let num1 = prompt("Nhập xâu thứ nhất: ");
+    let num2 = prompt("Nhập xâu thứ hai: ");
+    alert("Số kí tự chung: " + commonCharacterCount(num1,num2));
+</script>
+</body>
+</html>
