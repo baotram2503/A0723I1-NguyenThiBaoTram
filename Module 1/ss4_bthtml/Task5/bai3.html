@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    function nhapMang2Chieu() {
+        let mang = [];
+        let soHang = parseInt(prompt("Nhập số hàng của mảng:"));
+        let soCot = parseInt(prompt("Nhập số cột của mảng:"));
+
+        for (let i = 0; i < soHang; i++) {
+            mang[i] = [];
+            for (let j = 0; j < soCot; j++) {
+                mang[i][j] = parseInt(prompt(`Nhập phần tử tại hàng ${i + 1}, cột ${j + 1}:`));
+            }
+        }
+
+        return mang;
+    }
+    
+    function timMinMax(mang) {
+        let min = mang[0][0];
+        let max = mang[0][0];
+
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if (mang[i][j] < min) {
+                    min = mang[i][j];
+                }
+                if (mang[i][j] > max) {
+                    max = mang[i][j];
+                }
+            }
+        }
+
+        return { min, max };
+    }
+    let mang = nhapMang2Chieu();
+    let { min, max } = timMinMax(mang);
+
+    console.log(`Giá trị nhỏ nhất trong mảng là: ${min}`);
+    console.log(`Giá trị lớn nhất trong mảng là: ${max}`);
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function isPrime(n) {
+        if (n <= 1) {
+            return false;
+        }
+        if (n <= 3) {
+            return true;
+        }
+        if (n % 2 == 0 || n % 3 == 0) {
+            return false;
+        }
+        for (let i = 5; i * i <= n; i = i + 6) {
+            if (n % i == 0 || n % (i + 2) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function laSoNguyenTo(n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (let i = 2; i * i <= n; i++) {
+            if (n % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function lietKeVaDemSoNguyenTo(m, n) {
+        let maTran = [];
+        let soNguyenTo = [];
+        for (let i = 0; i < m; i++) {
+            maTran[i] = [];
+            for (let j = 0; j < n; j++) {
+                let so = prompt("Nhập số cho ma trận tại hàng " + (i+1) + " cột " + (j+1));
+                maTran[i][j] = parseInt(so, 10);
+                if (laSoNguyenTo(maTran[i][j])) {
+                    soNguyenTo.push(maTran[i][j]);
+                }
+            }
+        }
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                document.write(maTran[i][j] + "&nbsp&nbsp");
+            }
+            document.write("<br>");
+        }
+        document.write("Các số nguyên tố trong ma trận: ", soNguyenTo);
+        document.write("Số lượng số nguyên tố trong ma trận: ", soNguyenTo.length);
+    }
+
+    let m = prompt("Nhập số hàng m:");
+    let n = prompt("Nhập số cột n:");
+    lietKeVaDemSoNguyenTo(m, n)
+</script>
+</body>
+</html>
