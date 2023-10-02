@@ -5,54 +5,128 @@
     <title>Task 6</title>
 </head>
 <body>
+<h1>Danh sách học viên</h1>
+<button onclick="them()">Thêm học viên</button>
+<button onclick="sua()">Sửa học viên</button>
+<button onclick="xoa()">Xóa học viên</button>
+<table id="danhSachHocVien" border="1" style="border-collapse:collapse ;" >
+    <thead>
+    <tr>
+        <th>Mã học viên</th>
+        <th>Tên học viên</th>
+        <th>Lớp học viên</th>
+        <th>Email học viên</th>
+        <th>Ngày sinh học viên</th>
+        <th>Module học viên</th>
+    </tr>
+    </thead>
+</table>
 <script>
-    let students = [];
+    let danhSachHocVien = [];
+    function them() {
+        let maHocVien = prompt("Nhập mã học viên :")
+        let tenHocVien = prompt("Nhập tên học viên:");
+        let lopHocVien = prompt("Nhập lớp học viên:");
+        let emailHocVien = prompt("Nhập email học viên:");
+        let ngaySinhHocVien = prompt("Nhập ngày sinh học viên (dd/mm/yyyy):");
+        let moduleHocVien = parseInt(prompt("Nhập module hiện tại học viên :"));
 
-    function displayStudents() {
-        console.table(students);
+        let hocVien = {
+            id : maHocVien,
+            ten: tenHocVien,
+            lop: lopHocVien,
+            email : emailHocVien,
+            date : ngaySinhHocVien,
+            module : moduleHocVien
+        };
+
+        danhSachHocVien.push(hocVien);
+
+        hienThiDanhSachHocVien();
     }
 
-    function addStudent() {
-        let id = prompt("Nhập mã học viên:");
-        let name = prompt("Nhập tên học viên:");
-        let class_ = prompt("Nhập lớp học viên:");
-        let email = prompt("Nhập email học viên:");
-        let dob = prompt("Nhập ngày sinh học viên (dd/mm/yyyy):");
-        let module = prompt("Nhập module học viên:");
+    function hienThiDanhSachHocVien() {
+        let table = document.getElementById("danhSachHocVien");
+        let tbody = table.getElementsByTagName("tbody")[0];
+        tbody.innerHTML = "";
 
-        students.push({ id, name, class_, email, dob, module });
-    }
+        for (let hocVien of danhSachHocVien) {
+            let row = tbody.insertRow();
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
+            let cell5 = row.insertCell(4);
+            let cell6 = row.insertCell(5);
 
-    function editStudent() {
-        let id = prompt("Nhập mã học viên cần sửa:");
+            cell1.textContent = hocVien.id;
+            cell2.textContent = hocVien.ten;
+            cell3.textContent = hocVien.lop;
+            cell4.textContent = hocVien.email;
+            cell5.textContent = hocVien.date;
+            cell6.textContent = hocVien.module;
 
-        for (let i = 0; i < students.length; i++) {
-            if (students[i].id === id) {
-                students[i].name = prompt("Nhập tên mới:", students[i].name);
-                students[i].class_ = prompt("Nhập lớp mới:", students[i].class_);
-                students[i].email = prompt("Nhập email mới:", students[i].email);
-                students[i].dob = prompt("Nhập ngày sinh mới (dd/mm/yyyy):", students[i].dob);
-                students[i].module = prompt("Nhập module mới:", students[i].module);
-                return;
-            }
         }
-
-        alert("Mã học viên không tồn tại");
     }
+    function sua() {
+        let maCanSua = prompt("Nhập mã học viên cần sửa:");
 
-    function deleteStudent() {
-        let id = prompt("Nhập mã học viên cần xóa:");
+        let hocVienCanSua = danhSachHocVien.find(hocVien => hocVien.id === maCanSua);
+        if (hocVienCanSua) {
 
-        for (let i = 0; i < students.length; i++) {
-            if (students[i].id === id) {
-                if (confirm(`Bạn có chắc chắn muốn xóa học viên ${students[i].name}?`)) {
-                    students.splice(i, 1);
-                }
-                return;
+
+            let chon = parseInt(prompt(`Nhập số bạn muốn sửa :
+                                            1.Mã học viên mới
+                                            2.Tên học viên mới
+                                            3.Lớp học viên mới
+                                            4.Email học viên mới
+                                            5.Ngày sinh học viên mới
+                                            6.Module học viên mới
+                                            7.Hoàn thành.`));
+            switch (chon) {
+                case 1 :
+                    let maMoi = prompt("Nhập mã học viên mới:")
+                    hocVienCanSua.id = maMoi;
+                    break;
+                case 2 :
+                    let tenMoi = prompt("Nhập tên học viên mới:");
+                    hocVienCanSua.ten = tenMoi;
+                    break;
+                case 3 :
+                    let lopMoi = prompt("Nhập lớp học viên mới:");
+                    hocVienCanSua.lop = lopMoi;
+                    break;
+                case 4 :
+                    let emailMoi = prompt("Nhập email học viên mới:");
+                    hocVienCanSua.email = emailMoi;
+                    break;
+                case 5 :
+                    let ngaySinhMoi = prompt("Nhập ngày sinh học viên mới (dd/mm/yyyy):");
+                    hocVienCanSua.date = ngaySinhMoi;
+                    break;
+                case 6 :
+                    let moduleMoi = parseInt(prompt("Nhập module hiện tại học viên mới:"));
+                    hocVienCanSua.module = moduleMoi;
+                    break;
+                default:
+                    break;
             }
-        }
 
-        alert("Mã học viên không tồn tại");
+
+            hienThiDanhSachHocVien();
+        } else {
+            alert("Mã học viên không tồn tại.");
+        }
+    }
+    function xoa() {
+        let maXoa = prompt("Nhập mã học viên cần xóa:");
+        let indexXoa = danhSachHocVien.findIndex(hocVien => hocVien.id === maXoa);
+        if (indexXoa !== -1) {
+            danhSachHocVien.splice(indexXoa, 1);
+            hienThiDanhSachHocVien();
+        } else {
+            alert("Mã học viên không tồn tại.");
+        }
     }
 </script>
 </body>
